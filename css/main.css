@@ -25,7 +25,7 @@ h3 {
 	font-size: 9px;
 }
 
-.after a {
+a {
 	text-decoration: none;
 	-o-transition:.5s;
 	-ms-transition:.5s;
@@ -35,7 +35,7 @@ h3 {
 	opacity: .5;
 }
 
-.after a:hover {
+a:hover {
 	opacity: 1;
 }
 
