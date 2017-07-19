@@ -33,10 +33,15 @@ a {
 	-webkit-transition:.5s;
 	transition:.5s;
 	opacity: .5;
+	color: #0645AD;
 }
 
 a:hover {
 	opacity: 1;
+}
+
+section p {
+	margin-top: 1px;
 }
 
 .box {
@@ -132,8 +137,6 @@ body {
 
 .main aside a {
 	text-decoration: none;
-	border-bottom:1px dotted black;
-	color: gray;
 }
 
 .main aside #resume a {
@@ -156,7 +159,6 @@ body {
 
 .main aside {
 	color: black;
-	margin-top: 3em;
 	padding: 5px 5% 10px;
 }
 
