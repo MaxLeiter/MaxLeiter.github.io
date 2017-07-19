@@ -41,7 +41,8 @@ a:hover {
 }
 
 section p {
-	margin-top: 1px;
+	margin-top: .2em;
+	margin-bottom: 2em;
 }
 
 .box {
