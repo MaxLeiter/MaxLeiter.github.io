@@ -161,9 +161,10 @@ body {
 }
 
 .main aside {
+	clear: right;
 	color: black;
 	padding: 5px 5% 10px;
-	margin-bottom: 2em;
+	margin-bottom: 1em;
 }
 
 .footer-container {
