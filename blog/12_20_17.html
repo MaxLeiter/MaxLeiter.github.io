@@ -1,0 +1,53 @@
+<!doctype html>
+<html class="no-js" lang="">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<title>Max Leiter</title>
+		<meta name="description" content="Max Leiter - a highschool student with a passion for technology. My personal website detailing projects, classes, and other work.">
+		<meta name="keywords" content="Max,Leiter,Max Leiter,highschool,projects,resume">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<link rel="stylesheet" href="../css/normalize.min.css">
+		<link rel="stylesheet" href="../css/main.css">
+		<link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+		<!--[if lt IE 9]>
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+			<script>window.html5 || document.write('<script src="js/vendor/html5shiv.js"><\/script>')</script>
+		<![endif]-->
+	</head>
+	<body>
+		<div class="main-container">
+			<div class="blog main wrapper clearfix">
+
+				<h1> 3D Tic Tac Toe - post mortem </h1>
+				<hr>
+				<p>
+					For the past two months, as part of my Artificial Intelligence independant study at school, a fellow student and I have been working on a 3D Tic-Tac-Toe AI.
+
+					If you're unfamiliar with it, the game consists of a 4x4x4 Tic Tac Toe board like so:
+					<img style="height: 200px" src="image/tictactoe.gif"/>
+
+					You can win on all 4 "classic" planes, but there are also 14 other planes to play on. Can you recognize them all?
+
+					This was by far the largest problem my partner and I had tried to tackle, and we were a little lost on where to begin.
+				</p>
+
+				<h3> Representation </h3>
+				<p>
+					At the very least, <a href="https://github.com/MaxLeiter/SlidingNumberPuzzle">primarily from a past exercise in the class</a>, we knew we had to figure out a high quality representation of the game framework and states before doing anything else.
+				</p>
+				<p>
+					To begin, we had to first understand the game itself (honestly, this was partially an excuse to simply play the game, which is magnitudes more fun than normal 3x3 Tic Tac Toe). After some brute-force style math, we concluded the board consists of 76 lines on 18 planes.
+
+					A <a href="https://github.com/MaxLeiter/3DTicTacToe/blob/master/Plane.java"><code>Plane</code></a> is represented as <a href="https://github.com/MaxLeiter/3DTicTacToe/blob/master/Plane.java#L18"><code>Line[10]</code></a>, a <a href="https://github.com/MaxLeiter/3DTicTacToe/blob/master/Line.java"><code>Line</code></a> is <a href="https://github.com/MaxLeiter/3DTicTacToe/blob/master/Line.java#L3"><code>Coordinate[4]</code></a>, and a <a href="https://github.com/MaxLeiter/3DTicTacToe/blob/master/Coordinate.java"><code>Coordinate</code></a> is <a href="https://github.com/MaxLeiter/3DTicTacToe/blob/master/Coordinate.java#L5"><code>Integer[3]</code></a>.
+
+
+				</p>
+
+			</div>
+		</div>
+
+
+	</body>
+</html>

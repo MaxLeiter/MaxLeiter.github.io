@@ -180,8 +180,43 @@ body {
 	float: right;
 }
 
-@media only screen and (min-width: 768px) {
+.blog {
+	width: 50%;
+	font-style: normal;
+	font-weight: 400;
+	font-size: 17px;
+	letter-spacing: -.003em;
+	margin: auto;
+}
 
+.blog h1,
+.blog h3 {
+	font-weight: 600;
+	line-height: 1.04;
+	letter-spacing: -.015em;
+	margin: 20px 0;
+	word-wrap: break-word;
+	display: block;
+}
+
+.blog p {
+	line-height: 140%;
+}
+
+.blog img {
+	display: block;
+	margin: 0 auto;
+}
+
+
+@media only screen and (max-width: 600px) {
+	.blog {
+		width: 80%;
+		margin: 0 auto;
+	}
+}
+
+@media only screen and (min-width: 768px) {
 	.header-container,
 	.main aside {
 		-webkit-box-shadow: 0 5px 10px #aaa;
@@ -202,12 +237,17 @@ body {
 		float: right;
 		width: 28%;
 	}
+
 }
 
 @media only screen and (min-width: 1140px) {
-
 	.wrapper {
 		width: 1026px; /* 1140px - 10% for margins */
+		margin: 0 auto;
+	}
+
+	.blog {
+		width: 50%;
 		margin: 0 auto;
 	}
 }
