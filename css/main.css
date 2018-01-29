@@ -2,7 +2,6 @@ html {
 	color: #222;
 	font-size: 1em;
 	line-height: 1.4;
-	padding: 1em;
 }
 
 ::-moz-selection {
@@ -124,8 +123,8 @@ body {
 	text-align: center;
 }
 
-.profile .title {
-	color: grey;
+.profile .subtitle {
+	color: black;
 	font-size: 18px;
 }
 
@@ -133,22 +132,10 @@ body {
 	display: block;
 	margin: 0 auto;
 	margin-bottom: 1em;
+	margin-top: 1em;
 	width: 75%;
 	height: 75%;
 	border-radius: 50%;
-}
-
-.profile button {
-	border: none;
-	outline: 0;
-	display: inline-block;
-	padding: 8px;
-	color: white;
-	background-color: #000;
-	text-align: center;
-	cursor: pointer;
-	width: 100%;
-	font-size: 18px;
 }
 
 .profile a {
@@ -157,11 +144,16 @@ body {
 	color: black;
 }
 
+.profile i {
+	font-size: 1.1em;
+	padding: 0px 1px;
+}
+
 .profile button:hover, a:hover {
 	opacity: 0.7;
 }
 
-.profile 
+.profile,
 .wrapper {
 	width: 90%;
 	margin: 0 5%;
@@ -255,6 +247,10 @@ body {
 
 
 @media only screen and (max-width: 600px) {
+	aside {
+		border-radius: 3%;
+	}
+
 	.blog {
 		width: 80%;
 		margin: 0 auto;
