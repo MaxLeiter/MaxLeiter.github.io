@@ -14,4 +14,4 @@ tasks:
       echo "{\"extends\": \"stylelint-config-standard\"}" >> .stylelintrc
   - test: |
       cd ${project}
-      ./node_modules/.bin/stylelint ../../../
+      ./node_modules/.bin/stylelint ./../../../
