@@ -356,6 +356,7 @@ body {
 	@page { size: auto;  margin: 0mm; }
 	
 	.main .courses,
+	.profile .subtitle2,
 	.profile img,
 	.profile .ion-social-github::before,
 	.profile .ion-edit::before,
