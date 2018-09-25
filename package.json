@@ -1,0 +1,12 @@
+{
+  "devDependencies": {
+    "stylelint": "^9.5.0",
+    "stylelint-config-standard": "https://github.com/stylelint/stylelint-config-standard"
+  },
+  "stylelint": {
+  	"extends": "stylelint-config-standard"
+  },
+  "scripts": {
+    "test": "stylelint ./"
+  }
+}

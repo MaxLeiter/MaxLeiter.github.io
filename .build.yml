@@ -1,0 +1,17 @@
+image: archlinux
+packages:
+  - nodejs
+  - yarn
+environment:
+  build_env: production
+  project: maxleiter.github.io
+sources:
+  - https://github.com/MaxLeiter/maxleiter.github.io
+tasks:
+  - prepare: |
+      cd ${project}
+      yarn add stylelint stylelint-config-standard
+      echo "{\"extends\": \"stylelint-config-standard\"}" >> .stylelintrc
+  - test: |
+      cd ${project}
+      ./node_modules/.bin/stylelint ../../../
