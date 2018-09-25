@@ -128,6 +128,11 @@ body {
 	font-size: 18px;
 }
 
+.profile .subtitle .small {
+	color: black;
+	font-size: 15px;
+}
+
 .profile .subtitle2 {
 	color: black;
 	font-size: 15px;
@@ -356,41 +361,69 @@ body {
 	.profile .ion-edit::before,
 	.profile .ion-pound,
 	.profile .ion-social-hackernews,
-	section .after,
 	.footer-container {
 		display:  none;
 	}
 
+	section .after span:not(.box),
+	section .after a:not(.box) {
+		display:  none;
+	}
+
+	section h3 {
+		clear: left;
+	}
+
+	section .after .box {
+		width: 3em;
+		text-align: center;
+		line-height:  24px;
+		position: absolute;
+		font-size: 1.2em;
+		border: none;
+		opacity:  1;
+		background-color:  transparent;
+		color: #457397;
+	}
+
 	.main aside {
 		padding-bottom:  .2em;
+		border-radius: 15px;
 	}
 
 	.profile h1,
-	.profile .subtitle{
+	.profile .subtitle {
 		font-size:  1em;
 		line-height:  .6em;
+	}
+
+	.profile .subtitle .small {
+		font-size:  1em;
+		line-height:  1.5em;
 	}
 
 	.profile {
 		max-width:  90%;
 	}
+
 	.profile p {
 		margin: 2px 2px -2px;
 		padding: 0;
 	}
 
 	.profile i {
+		font-style:  normal;
 		font-family:  Helvetica, Helvetica Neue, Arial;
 		font-size:  .7em;
 	}
 
+	.profile .site::after,
 	.profile .ion-social-github::after {
 		content:  attr(data-link) " /";
 	}
 
 	.profile .ion-edit::after {
 		content:  attr(data-link);
-		/* font-family:  inherit; */
 	}
 
 	section p {
@@ -411,8 +444,8 @@ body {
 	.main .work {
 		width:  46%;
 		float:  right;
-		padding: 4px;
-		border-radius:  3%;
+		padding: 10px;
+		border-radius: 15px;
 		border-top:  none;
 	}
 
