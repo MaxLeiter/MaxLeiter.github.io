@@ -342,3 +342,79 @@ body {
 .clearfix {
 	*zoom: 1;
 }
+
+/**
+* Printing
+**/
+
+@media print {
+	@page { size: auto;  margin: 0mm; }
+	
+	.main .courses,
+	.profile img,
+	.profile .ion-social-github::before,
+	.profile .ion-edit::before,
+	.profile .ion-pound,
+	.profile .ion-social-hackernews,
+	section .after,
+	.footer-container {
+		display:  none;
+	}
+
+	.main aside {
+		padding-bottom:  .2em;
+	}
+
+	.profile h1,
+	.profile .subtitle{
+		font-size:  1em;
+		line-height:  .6em;
+	}
+
+	.profile {
+		max-width:  90%;
+	}
+	.profile p {
+		margin: 2px 2px -2px;
+		padding: 0;
+	}
+
+	.profile i {
+		font-family:  Helvetica, Helvetica Neue, Arial;
+		font-size:  .7em;
+	}
+
+	.profile .ion-social-github::after {
+		content:  attr(data-link) " /";
+	}
+
+	.profile .ion-edit::after {
+		content:  attr(data-link);
+		/* font-family:  inherit; */
+	}
+
+	section p {
+		margin-bottom: .2em;
+		line-height:  1.2em;
+	}
+
+	section a {
+		color: inherit;
+		opacity:  1;
+	}
+
+	.main .projects {
+		width:  50%;
+		display: inline-block;
+	}
+
+	.main .work {
+		width:  46%;
+		float:  right;
+		padding: 4px;
+		border-radius:  3%;
+		border-top:  none;
+	}
+
+}
+
