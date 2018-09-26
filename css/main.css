@@ -356,6 +356,7 @@ body {
 	@page { size: auto;  margin: 0mm; }
 	
 	.main .courses,
+	section .after,
 	.profile .subtitle2,
 	.profile img,
 	.profile .ion-social-github::before,
@@ -366,25 +367,8 @@ body {
 		display:  none;
 	}
 
-	section .after span:not(.box),
-	section .after a:not(.box) {
-		display:  none;
-	}
-
 	section h3 {
 		clear: left;
-	}
-
-	section .after .box {
-		width: 3em;
-		text-align: center;
-		line-height:  24px;
-		position: absolute;
-		font-size: 1.2em;
-		border: none;
-		opacity:  1;
-		background-color:  transparent;
-		color: #457397;
 	}
 
 	.main aside {
@@ -392,7 +376,6 @@ body {
 		border-radius: 15px;
 	}
 
-	.profile h1,
 	.profile .subtitle {
 		font-size:  1em;
 		line-height:  .6em;
@@ -427,6 +410,7 @@ body {
 		content:  attr(data-link);
 	}
 
+	aside p,
 	section p {
 		margin-bottom: .2em;
 		line-height:  1.2em;
