@@ -281,8 +281,10 @@ body {
 	}
 
 	.main article {
+		position:  absolute;
 		float: left;
-		width: 57%;
+		width: 40%;
+		right: 50%;
 	}
 
 	.main aside {
@@ -348,6 +350,15 @@ body {
 	*zoom: 1;
 }
 
+.grid-container {
+  display: grid;
+  height: 100%;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto;
+  grid-template-areas: ". ." ". .";
+}
+
+
 /**
 * Printing
 **/
@@ -355,7 +366,6 @@ body {
 @media print {
 	@page { size: auto;  margin: 0mm; }
 	
-	.main .courses,
 	section .after,
 	.profile .subtitle2,
 	.profile img,
@@ -422,12 +432,13 @@ body {
 	}
 
 	.main .projects {
-		width:  50%;
+		width: 45%;
 		display: inline-block;
 	}
 
+	.main .skills,
 	.main .work {
-		width:  46%;
+		width: 45%;
 		float:  right;
 		padding: 10px;
 		border-radius: 15px;
