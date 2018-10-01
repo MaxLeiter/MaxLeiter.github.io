@@ -71,6 +71,13 @@ section p {
   opacity: 1;
 }
 
+aside hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+}
+
 .header hr {
   display: block;
   height: 1px;
@@ -78,13 +85,6 @@ section p {
   border-top: 1px solid #ccc;
   margin: 1em 0;
   padding: 0;
-}
-
-aside hr {
-  display: block;
-  height: 1px;
-  border: 0;
-  border-top: 1px solid #ccc;
 }
 
 audio,
@@ -114,7 +114,17 @@ textarea {
 }
 
 body {
-  font: 16px/26px Helvetica, Helvetica Neue, Arial;
+  font: 16px/26px Helvetica, Helvetica Neue, Arial, sans-serif;
+}
+
+.profile a {
+  text-decoration: none;
+  font-size: 22px;
+  color: black;
+}
+
+.main aside a {
+  text-decoration: none;
 }
 
 .profile {
@@ -138,7 +148,6 @@ body {
   font-size: 15px;
 }
 
-
 .profile img {
   display: block;
   margin: 0 auto;
@@ -149,18 +158,13 @@ body {
   border-radius: 50%;
 }
 
-.profile a {
-  text-decoration: none;
-  font-size: 22px;
-  color: black;
-}
-
 .profile i {
   font-size: 1.1em;
   padding: 0 1px;
 }
 
-.profile button:hover, a:hover {
+.profile a:hover,
+.profile button:hover {
   opacity: 0.7;
 }
 
@@ -185,10 +189,6 @@ body {
   background: #efefef;
 }
 
-.main aside a {
-  text-decoration: none;
-}
-
 .main aside #resume a {
   border-bottom: none;
   font-style: italic;
@@ -198,10 +198,18 @@ body {
   color: white;
 }
 
-
 .main {
   padding: 30px 0;
-  padding-bottom: 4em;
+}
+
+.blog h1,
+.blog h3 {
+  font-weight: 600;
+  line-height: 1.04;
+  letter-spacing: -0.015em;
+  margin: 20px 0;
+  word-wrap: break-word;
+  display: block;
 }
 
 .main article h1 {
@@ -237,16 +245,6 @@ body {
   margin: auto;
 }
 
-.blog h1,
-.blog h3 {
-  font-weight: 600;
-  line-height: 1.04;
-  letter-spacing: -0.015em;
-  margin: 20px 0;
-  word-wrap: break-word;
-  display: block;
-}
-
 .blog p {
   line-height: 140%;
 }
@@ -255,7 +253,6 @@ body {
   display: block;
   margin: 0 auto;
 }
-
 
 @media only screen and (max-width: 600px) {
   aside {
@@ -291,7 +288,6 @@ body {
     float: right;
     width: 28%;
   }
-
 }
 
 @media only screen and (min-width: 1140px) {
@@ -358,14 +354,13 @@ body {
   grid-template-areas: ". ." ". .";
 }
 
-
 /**
 * Printing
 **/
 
 @media print {
-  @page { size: auto;  margin: 0; }
-	
+  @page { size: auto; margin: 0; }
+
   .main .work hr,
   section .after,
   .profile .subtitle2,
@@ -401,6 +396,12 @@ body {
     max-width: 90%;
   }
 
+  aside p,
+  section p {
+    margin-bottom: 0.2em;
+    line-height: 1.2em;
+  }
+
   .profile p {
     margin: 2px 2px -2px;
     padding: 0;
@@ -408,7 +409,7 @@ body {
 
   .profile i {
     font-style: normal;
-    font-family: Helvetica, Helvetica Neue, Arial;
+    font-family: Helvetica, Helvetica Neue, Arial, sans-serif;
     font-size: 0.7em;
   }
 
@@ -419,12 +420,6 @@ body {
 
   .profile .ion-edit::after {
     content: attr(data-link);
-  }
-
-  aside p,
-  section p {
-    margin-bottom: 0.2em;
-    line-height: 1.2em;
   }
 
   section a {
@@ -445,6 +440,4 @@ body {
     border-radius: 15px;
     border-top: none;
   }
-
 }
-
