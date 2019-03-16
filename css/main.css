@@ -359,7 +359,18 @@ body {
 **/
 
 @media print {
-  @page { size: auto; margin: 0; }
+  @page {
+    size: auto;
+    margin: 0;
+  }
+
+  body {
+    filter: grayscale(100%);
+  }
+
+  .main {
+    padding: 20px 0;
+  }
 
   .main .work hr,
   section .after,
@@ -432,6 +443,7 @@ body {
     display: inline-block;
   }
 
+  .main .extracurricular,
   .main .skills,
   .main .work {
     width: 45%;
