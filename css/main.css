@@ -424,6 +424,11 @@ body {
     font-size: 0.7em;
   }
 
+  .subtitle .hidden {
+    display: inline !important;
+    visibility:  visible;
+  }
+
   .profile .site::after,
   .profile .ion-social-github::after {
     content: attr(data-link) " /";
