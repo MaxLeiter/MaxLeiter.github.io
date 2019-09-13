@@ -189,7 +189,7 @@ body {
 .header-container,
 .footer-container,
 .main aside {
-  background: #efefef;
+ background: #efefef;
 }
 
 .main aside #resume a {
@@ -365,6 +365,11 @@ body {
 
   section h3 {
     clear: left;
+    color:  black;
+  }
+
+  .header {
+    color: black;
   }
 
   .main aside {
@@ -431,8 +436,8 @@ body {
   .main .skills,
   .main .work {
     width: 45%;
+    padding-left: 8px;
     float: right;
-    padding: 10px;
     border-radius: 15px;
     border-top: none;
   }
