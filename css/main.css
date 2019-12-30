@@ -81,6 +81,20 @@ aside hr {
   border-top: 1px solid #ccc;
 }
 
+.main-container aside {
+  margin:  0 auto;
+  display:  block;
+}
+
+.main .header {
+  -o-transition: 0.5s;
+  -ms-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+
 .header hr {
   display: block;
   height: 1px;
@@ -106,6 +120,11 @@ fieldset {
 
 textarea {
   resize: vertical;
+}
+
+:target {
+   background-color: orange;
+   padding: 5px;
 }
 
 .browserupgrade {
@@ -234,12 +253,12 @@ body {
 }
 
 .blog {
-  width: 50%;
   font-style: normal;
   font-weight: 400;
   font-size: 17px;
   letter-spacing: -0.003em;
   margin: auto;
+  width:  80%;
 }
 
 .blog p {
@@ -251,14 +270,10 @@ body {
   margin: 0 auto;
 }
 
+
 @media only screen and (max-width: 600px) {
   aside {
     border-radius: 3%;
-  }
-
-  .blog {
-    width: 80%;
-    margin: 0 auto;
   }
 }
 
@@ -285,6 +300,10 @@ body {
     float: right;
     width: 28%;
   }
+
+  .blog {
+    width:  70%;
+  }
 }
 
 @media only screen and (min-width: 1140px) {
@@ -294,8 +313,17 @@ body {
   }
 
   .blog {
-    width: 50%;
-    margin: 0 auto;
+    width:  50%;
+  }
+
+  .main-container aside {
+    width:  20%;
+    position:  sticky;
+    margin-left: 1em;
+    top:  15%;
+    margin-right: 0;
+    margin-bottom:  0;
+    float: left;
   }
 }
 

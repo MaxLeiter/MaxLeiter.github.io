@@ -7,14 +7,8 @@
 		<meta name="description" content="Max Leiter - a highschool student with a passion for technology. My personal website detailing projects, classes, and other work.">
 		<meta name="keywords" content="Max,Leiter,Max Leiter,highschool,projects,resume">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<style>
-		   :target {
-		      background-color: orange;
-		      padding: 5px;
-		   }
-		</style>
-		<link rel="stylesheet" href="../css/normalize.min.css">
-		<link rel="stylesheet" href="../css/main.css">
+		<link rel="stylesheet" href="css/normalize.min.css">
+		<link rel="stylesheet" href="css/main.css">
 		<!--[if lt IE 9]>
 			<script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
 			<script>window.html5 || document.write('<script src="js/vendor/html5shiv.js"><\/script>')</script>
@@ -22,50 +16,65 @@
 	</head>
 	<body>
 		<div class="main-container">
+			<aside>
+				<p style="text-align: center;">
+					<b> Table of Contents </b>
+				</p>
+				<ol style="margin-left: 2	0%;">
+					<li> <a href="#intro">Introduction</a></li>
+					<li> <a href="#how">How it works</a> </li>
+					<li> <a href="#why">Why</a> </li>
+					<li> <a href="#roadmap">Roadmap</a> </li>
+					<li> <a href="#contribute">Want to contribute?</a> </li>
+					<li> <a href="#instructions">Instructions</a> </li>
+				</ol>
+			</aside>
 			<div class="blog main wrapper clearfix">
 
 				<h1> X11 on iOS </h1>
 				<hr>
-				<h3> Introduction </h3>
+				<h3 class="header" id="intro"> Introduction </h3>
 				<p>
 					I'm excited to announce the "developer edition" <sup><a href="#1">[1]</a></sup> of X11 on iOS. I've successfully compiled and packaged the required dependencies (and some optional packages) for a fully functioning X11 desktop system on iOS 12 and up. All packages (and all their dependencies, as there are very few *nix libraries ported to iOS) have been compiled for arm64 and have been tested on iOS 12.4 and iOS 13.2.
 				</p>
-				<i>(soon to be replaced with much better image) teaser image:</i>
-				<img src="https://i.redd.it/fglq0aevrx441.png" style="width: 70%; height: 50%;">
-				<h3> How it works </h3>
 				<p>
-					At the moment, a virtual screen is accessed via a VNC client to an Xvnc<sup><a href="#2">[2]</a></sup> instance running on the iDevice. If you're unfamiliar, Xvnc is an X server with a virtual screen that can be accessed via VNC. The best part of this is no drivers are required: input and output are handled by Xvnc.
+					 I intend for this site to largely be documentation for building yourself, in case I disappear or lose interest. 
+				</p>
+				<!-- <i>(soon to be replaced with much better image) teaser image:</i> -->
+				<!-- <img src="https://i.redd.it/fglq0aevrx441.png" style="width: 70%; height: 50%;"> -->
+				<h3 class="header" id="how"> How it works </h3>
+				<p>
+					At the moment, a virtual screen is accessed via a VNC client to an Xvnc<sup><a href="#2">[2]</a></sup> instance running on the iDevice. If you're unfamiliar, Xvnc is an X server with a virtual screen that can be accessed via VNC. The best part of this is no drivers are required: it's all handled by Xvnc.
 				</p>
 				<p>
 		
 				</p>
-				<h3> Why </h3>
+				<h3 class="header" id="why"> Why </h3>
 				<p>
-					 I want to turn my iPad into a proper C development environment, and a windowing system helps with that. It's a powerful machine with a lot of Unix features, so X11 seemed reasonable. I'd like to eventually run Wayland, but at the moment that seems years off. Being able to compile and run arbitrary Linux applications would be huge -- Firefox, GNOME,  Java GUIs: it's all possible in X11<sup><a href="#3">[3]</a></sup>.
-				</p>
-				<p>
-					 I intend for this project to largely be documentation for building yourself, so in case I disappear and my repo becomes outdated or goes down you can build it yourself.
+					 I want to turn my iPad into a proper development environment, and a windowing system helps with that. It's a powerful machine with a Unix-like OS, so X11 seemed like a reasonable project. X11 allows running arbirtary Linux applications (assuming you can make them compile) &mdash; Firefox, IDE's, and native file explorers and more are now possible. 
 				</p>
 				
-				<h3> Current Features </h3>
+				<h3 class="header" id="features"> Current Features </h3>
 				<ul>
 					<li> X11 on iOS via Xvnc </li>
 					<li> Working window manager (jwm) </li>
-					<li> Loads of other packaged libraries, tools, and applications </li>
+					<li> <a href="https://github.com/MaxLeiter/cydia/tree/master/debs">Loads</a> of other packaged libraries, tools, and applications, including meson/ninja and ocaml. </li>
 					<li> All available in a <a href="https://maxleiter.com/cydia">Cydia repo</a></li>
 				</ul>
-				<h3> What's next? </h3>
+				<h3 class="header" id="roadmap"> What's next? </h3>
 				<ul>
 					<li> OpenGL support via Mesa </li>
 					<li> The rest of Xorg applications </li>
 					<li> Proper desktop enviroments like XFCE and GNOME</li>
 				</ul>
-				<h3> Want to help? </h3>
+				<h3 class="header" id="contribute"> Want to contribute? </h3>
 				Interested in using X11 now, or helping make it available sooner? Feel free to <a href="mailto:maxwell.leiter@gmail.com">email me</a> or find me on IRC as MaxLeiter in #X11iOS on Freenode.
+				<br> // TODO: finish writing contrib guide
+				<h3 class="header" id="instructions"> Instructions </h3>
+				// TODO: write-up notes on compiling all packages + deps.
 				<hr>
 				<a id="1" style="color: black; opacity: .7">[1] AKA only meant for people who know what they're doing</a> <br>
 				<a id="2" style="color: black; opacity: .7">[2] https://tigervnc.org/doc/Xvnc.html </a>  <br>
-				<a id="3" style="color: black; opacity: .7">[3] assuming you compile them and all their dependencies, as I haven't got to them yet.</a> <br>
 			</div>
 		</div>
 
