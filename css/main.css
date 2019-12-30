@@ -4,6 +4,11 @@ html {
   line-height: 1.4;
 }
 
+.footnote {
+  color: black;
+  opacity: .7;
+}
+
 ::-moz-selection {
   background: #b3d4fc;
   text-shadow: none;
@@ -33,7 +38,7 @@ a {
   -webkit-transition: 0.5s;
   transition: 0.5s;
   opacity: 0.5;
-  color: #0645ad;
+  color: #0660ad;
   cursor: pointer;
 }
 
@@ -316,7 +321,7 @@ body {
     width:  50%;
   }
 
-  .main-container aside {
+  .main-container .contents {
     width:  20%;
     position:  sticky;
     margin-left: 1em;
@@ -463,3 +468,4 @@ body {
     border-top: none;
   }
 }
+

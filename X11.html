@@ -3,7 +3,7 @@
 	<head>
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-		<title>X11 on iOS</title>
+		<title>Building X11 on iOS</title>
 		<meta name="description" content="Max Leiter - undergrad with a passion for technology. My personal website detailing projects, classes, and other work.">
 		<meta name="keywords" content="Max,Leiter,Max Leiter, X11, iOS, Linux, Xorg, Cydia, jailbreak, projects">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -13,10 +13,28 @@
 			<script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
 			<script>window.html5 || document.write('<script src="js/vendor/html5shiv.js"><\/script>')</script>
 		<![endif]-->
+		<style> 
+			@media (prefers-color-scheme: dark) {
+			  html {
+			    color: hsl(210, 10%, 62%);
+			    background:  #121212;
+			  }
+
+			  .footnote {
+			    color: hsl(210, 10%, 62%) !important;
+			  }
+
+			  :target {
+			     background-color: hsl(210, 80%, 10%);
+			     padding: 5px;
+			  }
+
+			}
+		</style>
 	</head>
 	<body>
 		<div class="main-container">
-			<aside>
+			<aside class="contents">
 				<p style="text-align: center;">
 					<b> Table of Contents </b>
 				</p>
@@ -73,8 +91,8 @@
 				<h3 class="header" id="instructions"> Instructions </h3>
 				// TODO: write-up notes on compiling all packages + deps.
 				<hr>
-				<a id="1" style="color: black; opacity: .7">[1] AKA only meant for people who know what they're doing</a> <br>
-				<a id="2" style="color: black; opacity: .7">[2] https://tigervnc.org/doc/Xvnc.html </a>  <br>
+				<a class="footnote" id="1">[1] AKA only meant for people who know what they're doing</a> <br>
+				<a class="footnote" id="2">[2] https://tigervnc.org/doc/Xvnc.html </a>  <br>
 			</div>
 		</div>
 
