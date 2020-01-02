@@ -8,6 +8,11 @@ html {
   opacity: .7;
 }
 
+.footnote:hover::after {
+  content: '\21A9';
+  padding-left: .3em;
+}
+
 ::-moz-selection {
   background: #b3d4fc;
   text-shadow: none;
