@@ -17,7 +17,7 @@
 			@media (prefers-color-scheme: dark) {
 			  html {
 			    color: hsl(210, 10%, 62%);
-			    background:  #121212;
+			    background: #121212;
 			  }
 
 			  .footnote {
@@ -28,6 +28,19 @@
 			     background-color: hsl(210, 80%, 10%);
 			     padding: 5px;
 			  }
+
+			  button {
+			    border: 0.1em solid #121212;
+			    color: white;
+			    background-color: #457397;
+			    opacity: .7;
+			  }
+
+			  button:hover{
+			    color: white;
+			    background-color: darkslateblue;
+			  }
+
 
 			}
 		</style>
@@ -57,7 +70,10 @@
 					I'm excited to announce the "developer edition" <sup><a href="#1">[1]</a></sup> of X11 on iOS. The packages and dependencies for a fully functioning X11 desktop system on iOS 12 and up have been compiled and are avaiable on Cydia. All packages have been compiled for arm64 and have been tested on iOS 12.4 and iOS 13.1. This requires a jailbroken device. 
 				</p>
 				<p>
-					 Ths site will serve largely as documentation for building yourself, in case I disappear or lose interest. You can add the Cydia repo, https://maxleiter.com/cydia, to get the deb versions of the packages. Please let me know if you run across any issues; it's likely I messed up including a library or something like that.
+					 Ths site will serve largely as documentation for building yourself, in case I disappear or lose interest. You can add the Cydia repo below for the deb packages. Please let me know if you run across any issues; it's likely I messed up including a library or something like that.
+					 <br>
+					 <br>
+					 <a style="opacity: 1;" href="cydia://url/https://cydia.saurik.com/api/share#?source=https://maxleiter.com/cydia"><button>Add to Cydia</button></a>
 				</p>
 				<!-- <i>(soon to be replaced with much better image) teaser image:</i> -->
 				<!-- <img src="https://i.redd.it/fglq0aevrx441.png" style="width: 70%; height: 50%;"> -->
