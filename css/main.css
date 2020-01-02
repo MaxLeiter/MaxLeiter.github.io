@@ -41,7 +41,7 @@ a {
   -moz-transition: 0.5s;
   -webkit-transition: 0.5s;
   transition: 0.5s;
-  opacity: 0.5;
+  opacity: 0.8;
   color: #0660ad;
   cursor: pointer;
 }
