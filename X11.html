@@ -35,7 +35,7 @@
 	<body>
 		<div class="main-container">
 			<aside class="contents">
-				<p style="text-align: center;">
+				<p class="contents-title" style="text-align: center;">
 					<b> Table of Contents </b>
 				</p>
 				<ol style="margin-left: 20%;">
@@ -54,16 +54,16 @@
 				<hr>
 				<h3 class="header" id="intro"> Introduction </h3>
 				<p>
-					I'm excited to announce the "developer edition" <sup><a href="#1">[1]</a></sup> of X11 on iOS. I've successfully compiled and packaged the required dependencies (and some optional packages) for a fully functioning X11 desktop system on iOS 12 and up. All packages have been compiled for arm64 and have been tested on iOS 12.4 and iOS 13.1. This requires a jailbroken device. 
+					I'm excited to announce the "developer edition" <sup><a href="#1">[1]</a></sup> of X11 on iOS. The packages and dependencies for a fully functioning X11 desktop system on iOS 12 and up have been compiled and are avaiable on Cydia. All packages have been compiled for arm64 and have been tested on iOS 12.4 and iOS 13.1. This requires a jailbroken device. 
 				</p>
 				<p>
-					 I intend for this site to largely be documentation for building yourself, in case I disappear or lose interest. You can add my Cydia repo, https://maxleiter.com/cydia, to get the deb versions of the packages. Please let me know if you run across any issues; it's likely I messed up including a library or something like that.
+					 Ths site will serve largely as documentation for building yourself, in case I disappear or lose interest. You can add the Cydia repo, https://maxleiter.com/cydia, to get the deb versions of the packages. Please let me know if you run across any issues; it's likely I messed up including a library or something like that.
 				</p>
 				<!-- <i>(soon to be replaced with much better image) teaser image:</i> -->
 				<!-- <img src="https://i.redd.it/fglq0aevrx441.png" style="width: 70%; height: 50%;"> -->
 				<h3 class="header" id="how"> How it works </h3>
 				<p>
-					At the moment, a virtual screen is accessed via a VNC client to an Xvnc<sup><a href="#2">[2]</a></sup> instance running on the iDevice. If you're unfamiliar, Xvnc is an X server with a virtual screen that can be accessed via VNC. The best part of this is no drivers are required: it's all handled by Xvnc.
+					At the moment, a virtual screen is accessed via a VNC client to an Xvnc<sup><a href="#2">[2]</a></sup>instance running on the iDevice. If you're unfamiliar, Xvnc is an X server with a virtual screen that can be accessed via VNC. The best part of this is no drivers are required: it's all handled by Xvnc.
 				</p>
 				<p>
 		
@@ -85,6 +85,7 @@
 					<li> OpenGL support via Mesa </li>
 					<li> The rest of Xorg applications </li>
 					<li> Proper desktop enviroments like XFCE and GNOME</li>
+					<li> Expirement with Wayland </li>
 				</ul>
 				<h3 class="header" id="contribute"> Want to contribute? </h3>
 				Interested in using X11 now, or helping make it available sooner? Feel free to <a href="mailto:maxwell.leiter@gmail.com">email me</a> or find me on IRC as MaxLeiter in #X11iOS on Freenode.
