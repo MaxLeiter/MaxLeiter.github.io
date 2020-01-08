@@ -163,7 +163,7 @@
 						<tr>
 							<td>Fontconfig</td>
 							<td>2.8.0 ⚠️</td>
-							<td>Requires modifying <code><abbr title="For me, /usr/share/SDKs/iPhoneOS.sdk/usr/include/stdlib.h:195:6">stdlib.h</abbr></code> in SDK to allow <code>system</code> calls. 2.8.0 is an <b>ancient</b> version but I've been unable to fix newer versions.</td>
+							<td>Requires modifying <code><abbr title="For me, /usr/share/SDKs/iPhoneOS.sdk/usr/include/stdlib.h:195:6">stdlib.h</abbr></code> in SDK to allow <code>system</code> calls. 2.8.0 is an <b>ancient</b> version but I've been unable to fix newer ones.</td>
 						</tr>
 						<tr>
 							<td>xtrans</td>
@@ -178,7 +178,7 @@
 						<tr>
 							<td>libFS</td>
 							<td>1.0.8</td>
-							<td>Need to remove some code from the <code>libtool</code> file. The enviroment variables aren't populated on iOS so a generated bash command is wrong.</td>
+							<td>Need to remove some code from the <code>libtool</code> file. The enviroment variables aren't populated on iOS so a generated bash command is wrong. Check the output of <code>./configure</code> to pinpoint the line number.</td>
 						</tr>
 						<tr>
 							<td>libICE</td>
