@@ -1,48 +1,20 @@
 <!doctype html>
 <html class="no-js" lang="">
-	<head>
-		<meta charset="utf-8">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-		<title>Building X11 on iOS</title>
-		<meta name="description" content="Instructions for building X11 and Xorg on jailbroken iOS. ">
-		<meta name="keywords" content="Max,Leiter,Max Leiter, X11, iOS, Linux, Xorg, Cydia, jailbreak, projects">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<link rel="stylesheet" href="css/normalize.min.css">
-		<link rel="stylesheet" href="css/main.css">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<title>Building X11 on iOS</title>
+	<meta name="description" content="Instructions for building X11 and Xorg on jailbroken iOS. ">
+	<meta name="keywords" content="Max,Leiter,Max Leiter, X11, iOS, Linux, Xorg, Cydia, jailbreak, projects">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="css/normalize.min.css">
+	<link rel="stylesheet" href="css/main.css">
+	<link rel="stylesheet" href="css/X11.css">
 		<!--[if lt IE 9]>
 			<script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
 			<script>window.html5 || document.write('<script src="js/vendor/html5shiv.js"><\/script>')</script>
 		<![endif]-->
-		<style> 
-			@media (prefers-color-scheme: dark) {
-			  html {
-			    color: hsl(210, 10%, 62%);
-			    background: #121212;
-			  }
 
-			  .footnote {
-			    color: hsl(210, 10%, 62%) !important;
-			  }
-
-			  :target {
-			     background-color: hsl(210, 80%, 10%);
-			     padding: 5px;
-			  }
-
-			  button {
-			    border: 0.1em solid #121212;
-			    color: white;
-			    background-color: #457397;
-			    opacity: .7;
-			  }
-
-			  button:hover{
-			    color: white;
-			    background-color: darkslateblue;
-			  }
-
-			}
-		</style>
 	</head>
 	<body>
 		<div class="main-container">
@@ -57,7 +29,7 @@
 					<li> <a href="#features">Features</a> </li>
 					<li> <a href="#roadmap">Roadmap</a> </li>
 					<li> <a href="#contribute">Want to contribute?</a> </li>
-					<li> <a href="#instructions">Instructions</a> </li>
+					<li> <a href="#instructions">Building instructions</a> </li>
 				</ol>
 			</aside>
 			<div class="blog main wrapper clearfix">
@@ -66,13 +38,13 @@
 				<hr>
 				<h3 class="header" id="intro"> Introduction </h3>
 				<p>
-					I'm excited to announce the "developer edition" <sup><a href="#1" id="1src">[1]</a></sup> of X11 on iOS. The packages and dependencies for a fully functioning X11 desktop system on iOS 12 and up have been compiled and are avaiable on Cydia. All packages have been compiled for arm64 and have been tested on iOS 12.4 and iOS 13.1. This requires a jailbroken device. 
+					I'm excited to announce the "developer edition" <sup><a href="#1" id="1src">[1]</a></sup> of X11 on iOS. Most (see below) packages and dependencies for a fully functioning X11 desktop system on iOS 12 and up have been compiled and are avaiable on Cydia. All packages have been compiled for arm64 and have been tested on iOS 12.4 and iOS 13.1. This requires a jailbroken device. 
 				</p>
 				<p>
-					 Ths site will serve largely as documentation for building yourself, in case I disappear or lose interest. You can add the Cydia repo below for the deb packages. Please let me know if you run across any issues; it's likely I messed up including a library or something like that.
-					 <br>
-					 <br>
-					 <a style="opacity: 1;" href="cydia://url/https://cydia.saurik.com/api/share#?source=https://maxleiter.com/cydia"><button>Add to Cydia</button></a>
+					This site will serve largely as documentation for building yourself, in case I disappear or lose interest. You can add the Cydia repo below for the deb packages. Please let me know if you run across any issues; it's likely I messed up including a library or something like that.
+					<br>
+					<br>
+					<a style="opacity: 1;" href="cydia://url/https://cydia.saurik.com/api/share#?source=https://maxleiter.com/cydia"><button>Add to Cydia</button></a>
 				</p>
 				<!-- <i>(soon to be replaced with much better image) teaser image:</i> -->
 				<!-- <img src="https://i.redd.it/fglq0aevrx441.png" style="width: 70%; height: 50%;"> -->
@@ -81,11 +53,11 @@
 					At the moment, a virtual screen is accessed via a VNC client to an Xvnc<sup><a href="#2" id="2src">[2]</a></sup>instance running on the iDevice. If you're unfamiliar, Xvnc is an X server with a virtual screen that can be accessed via VNC. The best part of this is no drivers are required: it's all handled by Xvnc.
 				</p>
 				<p>
-		
+
 				</p>
 				<h3 class="header" id="why"> Why </h3>
 				<p>
-					 I want to turn my iPad into a proper development environment, and a windowing system helps with that. It's a powerful machine with a Unix-like OS, so X11 seemed like a reasonable project. X11 allows running arbirtary Linux applications (assuming you can make them compile) &mdash; Firefox, IDE's, native file explorers, and more are now possible. 
+					I want to turn my iPad into a proper development environment, and a windowing system helps with that. It's a powerful machine with a Unix-like OS, so X11 seemed like a reasonable project. X11 allows running arbirtary Linux applications (assuming you can make them compile) &mdash; Firefox, IDE's, native file explorers, and more are now possible. 
 				</p>
 				
 				<h3 class="header" id="features"> Current Features </h3>
@@ -97,18 +69,166 @@
 				</ul>
 				<h3 class="header" id="roadmap"> What's next? </h3>
 				<ul>
+					<li> Fix modern versions of fontconfig (> 2.8.0)</li>
 					<li> OpenGL support via Mesa </li>
 					<li> The rest of Xorg applications </li>
 					<li> Proper desktop enviroments like XFCE and GNOME</li>
 					<li> Experiment with Wayland </li>
 				</ul>
 				<h3 class="header" id="contribute"> Want to contribute? </h3>
-				Interested in using X11 now, or helping make it available sooner? Feel free to <a href="mailto:maxwell.leiter@gmail.com">email me</a> or find me on IRC as MaxLeiter in #X11iOS on Freenode.
-				<br> // TODO: finish writing contrib guide
-				<h3 class="header" id="instructions"> Instructions </h3>
-				// TODO: write-up notes on compiling all packages + deps.
+				Interested in using X11 now, or helping make it available sooner? Feel free to <a href="mailto:maxwell.leiter@gmail.com">email me</a> or find me on IRC as MaxLeiter in #X11iOS on Freenode. More information on contributing is in the works. 
+				<h3 class="header" id="instructions"> Building instructions </h3>
+				<div class="info"><i> Note: This section is unfinished. Here be dragons. </i></div>
+				<p>Before you start, be sure to have an iOS SDK located at <code>/usr/share/iPhoneOS.sdk</code> for sbingner's llvm-10 to function.</p>
+				<p>The following tools/libraries are required to to build the packages (unless you choose to build these yourself): </p>
+				<p>
+				From <a href="https://mcapollo.github.io">MCApollo's repository</a>:
+				<ul>
+					<li>Gettext</li>
+					<li>Glib</li>
+					<li>libffi</li>
+					<li>libxml2</li>
+					<li>OpenSSL</li>
+					<li>PkgConfig</li>
+					<li>libiconv</li>
+					<li>Python@3.7</i>
+						<ul>
+							<li>Run <code>python3 -m ensurepip</code> and <code>pip3 install meson</code> after installing</li>
+						</ul>
+					<li>readline</li>
+					<li>zlib</li>
+				</ul>
+				</p>
+				<p>
+				From <a href="https://apt.binger.com">Sam Bingner's</a>:
+				<ul>
+					<li>clang-10</li>
+				</ul>
+				</p>
+				<p>
+				From mine:
+				<ul>
+					<li>ninja</li>
+					<li>libpng</li>
+					<li>gperf</li>
+				</ul>
+				</p>
+				<p>
+					In general, you can follow the instructions from <a href="http://www.linuxfromscratch.org/blfs/">Beyond  LinuxFromScratch</a>. This project is based on 9.0, with version differences marked with ⚠️ below. Empty notes means compiles and works as-is from BLFS. Additionally, all of the packages are available (generally as dylibs) on the Cydia repo linked above.
+				</p>
+				<table class="table">
+					<thead>
+						<tr>
+							<th>Name</th>
+							<th>Version</th>
+							<th>Notes</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>util-macros</td>
+							<td>1.19.2</td>
+							<td></td>
+						</tr>
+						<tr>
+							<td>xorgproto</td>
+							<td>2019.2</td>
+							<td></td>
+						</tr>
+						<tr>
+							<td>libXau</td>
+							<td>1.0.9</td>
+							<td></td>
+						</tr>
+						<tr>
+							<td>libXdmcp</td>
+							<td>1.1.3</td>
+							<td></td>
+						</tr>
+						<tr>
+							<td>xcb-proto</td>
+							<td>1.13</td>
+							<td></td>
+						</tr>
+						<tr>
+							<td>libxcb</td>
+							<td>1.13.1 </td>
+							<td></td>
+						</tr>
+						<tr>
+							<td>Freetype</td>
+							<td>2.10.1 </td>
+							<td></td>
+						</tr>
+						<tr>
+							<td>Fontconfig</td>
+							<td>2.8.0 ⚠️</td>
+							<td>Requires modifying <code><abbr title="For me, /usr/share/SDKs/iPhoneOS.sdk/usr/include/stdlib.h:195:6">stdlib.h</abbr></code> in SDK to allow <code>system</code> calls. 2.8.0 is an <b>ancient</b> version but I've been unable to fix newer versions.</td>
+						</tr>
+						<tr>
+							<td>xtrans</td>
+							<td>1.4.0</td>
+							<td></td>
+						</tr>
+						<tr>
+							<td>libX11</td>
+							<td>1.6.9</td>
+							<td></td>
+						</tr>
+						<tr>
+							<td>libFS</td>
+							<td>1.0.8</td>
+							<td>Need to remove some code from the <code>libtool</code> file. The enviroment variables aren't populated on iOS so a generated bash command is wrong.</td>
+						</tr>
+						<tr>
+							<td>libICE</td>
+							<td>1.0.1</td>
+							<td></td>
+						</tr>
+						<tr>
+							<td>libSM</td>
+							<td>1.2.3</td>
+							<td></td>
+						</tr>
+						<tr>
+							<td>libXScrnSaver</td>
+							<td>1.2.3</td>
+							<td></td>
+						</tr>
+						<tr>
+							<td>libXt</td>
+							<td>1.2.0</td>
+							<td></td>
+						</tr>
+						<tr>
+							<td>libXmu</td>
+							<td>1.1.3</td>
+							<td></td>
+						</tr>
+						<tr>
+							<td>libXpm</td>
+							<td>3.5.13</td>
+							<td></td>
+						</tr>
+						<tr>
+							<td>libXaw</td>
+							<td>1.0.13</td>
+							<td></td>
+						</tr>
+						<tr>
+							<td>libXfixes</td>
+							<td>5.0.3</td>
+							<td></td>
+						</tr>
+						<tr>
+							<td>libXcomposite</td>
+							<td>0.4.5</td>
+							<td></td>
+						</tr>
+					</tbody>
+				</table>
 				<hr>
-				<a class="footnote" id="1" href="#1src">[1] AKA only meant for people who know what they're doing</a> <br>
+				<a class="footnote" id="1" href="#1src">[1] AKA only meant for people who know what they're doing, as it's not close to finished / stable yet.</a> <br>
 				<a class="footnote" id="2" href="#2src">[2] https://tigervnc.org/doc/Xvnc.html </a>  <br>
 			</div>
 		</div>
@@ -118,4 +238,4 @@
 			<a href="https://github.com/MaxLeiter/maxleiter.github.io/blob/master/X11.html" id="source">This page on GitHub</a>
 		</footer>
 	</body>
-</html>
+	</html>

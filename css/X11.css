@@ -1,0 +1,58 @@
+.info {
+	color:  #EFEFEF;
+	background: gray;
+	width:  100%;
+	margin-top: 5px;
+	margin-bottom: 5px;
+	background: #483d8b;
+}
+
+table {
+	white-space: nowrap;
+}
+
+td:last-child {
+	padding: 2px;
+    white-space: normal;
+}
+
+table, th, td {
+	border: 1px solid gray;
+}
+
+td {
+	padding: 3px;
+}
+
+@media (prefers-color-scheme: dark) {
+  html {
+    color: hsl(210, 10%, 62%);
+    background: #121212;
+  }
+
+  .footnote {
+    color: hsl(210, 10%, 62%) !important;
+  }
+
+  :target {
+     background-color: hsl(210, 80%, 10%);
+     padding: 5px;
+  }
+
+  button {
+    border: 0.1em solid #121212;
+    color: white;
+    background-color: #457397;
+    opacity: .7;
+  }
+
+  button:hover{
+    color: white;
+    background-color: darkslateblue;
+  }
+
+  .info {
+  	color: hsl(210, 10%, 62%);
+  }
+
+}
