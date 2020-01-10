@@ -121,7 +121,7 @@
 				</ul>
 				</p>
 				<p>
-					In general, you can follow the instructions from <a href="http://www.linuxfromscratch.org/blfs/">Beyond  LinuxFromScratch</a>. This project is based on 9.0, with version differences marked with ⚠️ below. Projects markd with ❗️ means unavailable on iOS or I was unable to build them. Empty notes means compiles and works as-is from BLFS. Additionally, all of the packages are available (generally as dylibs) on the Cydia repo linked above.
+					In general, you can follow the instructions from <a href="http://www.linuxfromscratch.org/blfs/">Beyond  LinuxFromScratch</a>. This project is based on 9.0, with version differences marked with ⚠️ below. Projects marked with ❗️ means unavailable on iOS or I was unable to build them. Empty notes means compiles and works as-is from BLFS. Additionally, all of the packages are available (generally as dylibs) on the Cydia repo linked above.
 				</p>
 				<table class="table">
 					<thead>
@@ -365,7 +365,7 @@
 						<tr>
 							<td>Mesa</td>
 							<td>0.52.1</td>
-							<td>Set DRI drivers to swrast and set gallium drivers to empty. I manually modifed meson_options.txt. Also symlink m4 to <code>/opt/local/bin/gm4</code>. I had to remove an __APPLE__ check in <code>/src/mesa/main/texcompress_s3tc_tmp.h</code> so it used the <code>GL</code> library instead of the macOS <code>OpenGL</code> one.</td> Also, be sure to specify a minimum iOS version so thread-local support works with something like <code>-miphoneos-version-min=11.2</code>.
+							<td>Set DRI drivers to swrast and set gallium drivers to empty. I manually modifed meson_options.txt. Also symlink m4 to <code>/opt/local/bin/gm4</code>. I had to remove an __APPLE__ check in <code>/src/mesa/main/texcompress_s3tc_tmp.h</code> so it used the <code>GL</code> library instead of the macOS <code>OpenGL</code> one. Also, be sure to specify a minimum iOS version so thread-local support works with something like <code>-miphoneos-version-min=11.2</code>.</td>
 						</tr>
 						<tr>
 							<td>xbitmaps</td>
