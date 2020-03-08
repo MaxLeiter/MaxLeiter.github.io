@@ -51,101 +51,6 @@ section {
   padding-top: 1em;
 }
 
-/** Animations **/
-.profile {
-  animation: .5s ease-in .5s 1 forwards fadeInFromNone;
-  opacity: 0;
-}
-
-hr {
-  animation: .5s ease-in .8s 1 forwards fadeInFromNone;
-  opacity: 0;
-}
-
-.projects h1:nth-child(1) { opacity: 0; animation: .5s ease-in 1.1s 1 forwards fadeInFromNone; width: 100%;}
-.projects section:nth-child(2) { opacity: 0; animation: .5s ease-in 1.4s 1 forwards fadeInFromNone; }
-.projects section:nth-child(3) { opacity: 0; animation: .5s ease-in 1.7s 1 forwards fadeInFromNone; }
-.projects section:nth-child(4) { opacity: 0; animation: .5s ease-in 2s 1 forwards fadeInFromNone; }
-.wontAnimate                   { opacity: 0; animation: .5s ease-in 2.3s 1 forwards fadeInFromNone; }
-.projects section:nth-child(6) { opacity: 0; animation: .5s ease-in 2.6s 1 forwards fadeInFromNone; }
-.projects section:nth-child(7) { opacity: 0; animation: .5s ease-in 2.9s 1 forwards fadeInFromNone; }
-.projects section:nth-child(8) { opacity: 0; animation: .5s ease-in 3.2s 1 forwards fadeInFromNone; }
-
-footer {
-  animation: .5s ease-in 4.1s 1 forwards fadeInFromNone;
-  opacity: 0;
-  padding-bottom: 20px;
-}
-
-
-@-webkit-keyframes fadeInFromNone {
-  0% {
-    display: none;
-    opacity: 0;
-  }
-
-  1% {
-    display: block;
-    opacity: 0;
-  }
-
-  100% {
-    display: block;
-    opacity: 1;
-  }
-}
-
-@-moz-keyframes fadeInFromNone {
-  0% {
-    display: none;
-    opacity: 0;
-  }
-
-  1% {
-    display: block;
-    opacity: 0;
-  }
-
-  100% {
-    display: block;
-    opacity: 1;
-  }
-}
-
-@-o-keyframes fadeInFromNone {
-  0% {
-    display: none;
-    opacity: 0;
-  }
-
-  1% {
-    display: block;
-    opacity: 0;
-  }
-
-  100% {
-    display: block;
-    opacity: 1;
-  }
-}
-
-@keyframes fadeInFromNone {
-  0% {
-    display: none;
-    opacity: 0;
-  }
-
-  1% {
-    display: block;
-    opacity: 0;
-  }
-
-  100% {
-    display: block;
-    opacity: 1;
-  }
-}
-
 section p {
   margin-top: 0.2em;
 }
@@ -180,7 +85,7 @@ video {
  padding: 5px;
 }
 
-.profile a {
+.profile .icon {
   text-decoration: none;
   font-size: 28px;
   color: black;
@@ -206,13 +111,11 @@ video {
 }
 
 .profile .subtitle {
-  color: black;
   font-size: 18px;
 }
 
-.profile .subtitle .small {
-  color: black;
-  font-size: 15px;
+.profile .small {
+  font-size: 16px;
 }
 
 .profile .subtitle2 {
@@ -253,13 +156,13 @@ video {
     opacity: 1;
   }
 
-  .main > h1:nth-child(1) { animation: none; }
-  .main > section:nth-child(2) { opacity: 0; animation: .5s ease-in 1.4s 1 forwards fadeInFromNone; }
-  .main >  section:nth-child(3) { opacity: 0; animation: .5s ease-in 1.7s 1 forwards fadeInFromNone; }
-  .main >  section:nth-child(4) { opacity: 0; animation: .5s ease-in 2s 1 forwards fadeInFromNone; }
+  .projects > h1:nth-child(1) { animation: none; }
+  .projects > section:nth-child(2) { opacity: 0; animation: .5s ease-in 1.4s 1 forwards fadeInFromNone; }
+  .projects >  section:nth-child(3) { opacity: 0; animation: .5s ease-in 1.7s 1 forwards fadeInFromNone; }
+  .projects > section:nth-child(5) { opacity: 0; animation: .5s ease-in 2s 1 forwards fadeInFromNone; }
   .wontAnimate                   { opacity: 0; animation: .5s ease-in 2.3s 1 forwards fadeInFromNone; }
-  .main > section:nth-child(6) { opacity: 0; animation: .5s ease-in 2.6s 1 forwards fadeInFromNone; }
-  .main > section:nth-child(7) { opacity: 0; animation: .5s ease-in 2.9s 1 forwards fadeInFromNone; }
+  .projects > section:nth-child(6) { opacity: 0; animation: .5s ease-in 2.6s 1 forwards fadeInFromNone; }
+  .projects > section:nth-child(7) { opacity: 0; animation: .5s ease-in 2.9s 1 forwards fadeInFromNone; }
 }
 
 @media only screen and (min-width: 768px) {
@@ -333,7 +236,7 @@ video {
     background: var(--dark);
   }
 
-  .profile a {
+  .profile .icon {
     color: hsl(210, 10%, 72%);
   }
 
